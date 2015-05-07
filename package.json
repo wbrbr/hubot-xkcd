@@ -1,0 +1,20 @@
+{
+  "name": "hubot-xkcd",
+  "version": "0.0.1",
+  "description": "Get links to XKCD comics with Hubot",
+  "main": "lib/xkcd.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "nounoursheureux/hubot-xkcd",
+  "keywords": [
+    "xkcd",
+    "hubot-scripts"
+  ],
+  "author": "Nounours Heureux <schtroumps31@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/nounoursheureux/hubot-xkcd/issues"
+  },
+  "homepage": "https://github.com/nounoursheureux/hubot-xkcd#readme"
+}
