@@ -10,7 +10,6 @@
 #  nounoursheureux
 
 module.exports = (robot) ->
-  robot.parseHelp(__filename)
   robot.respond /xkcd( current)?$/i, (res) ->
     robot.http('http://xkcd.com/info.0.json').get() (err, response, body) ->
       throw err if err
