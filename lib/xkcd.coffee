@@ -14,7 +14,7 @@ module.exports = (robot) ->
     robot.http('http://xkcd.com/info.0.json').get() (err, response, body) ->
       throw err if err
       data = JSON.parse(body)
-      res.send "#{data.title}: #{data.img}"
+      res.send data.title, data.img, data.alt
 
   robot.respond /xkcd random$/i, (res) ->
     robot.http('http://xkcd.com/info.0.json').get() (err, response, body) ->
@@ -23,7 +23,7 @@ module.exports = (robot) ->
       randNum = res.random [1..maxNum]
       robot.http("http://xkcd.com/#{randNum}/info.0.json").get() (err, response, body) ->
         data = JSON.parse(body)
-        res.send "#{data.title}: #{data.img}"
+        res.send data.title, data.img, data.alt
 
   robot.respond /xkcd (\d+)/i, (res) ->
     robot.http("http://xkcd.com/#{res.match[1]}/info.0.json").get() (err, response, body) ->
@@ -31,4 +31,4 @@ module.exports = (robot) ->
         res.send 'This comic doesn\'t exist'
       else
         data = JSON.parse body
-        res.send "#{data.title}: #{data.img}"
+        res.send data.title, data.img, data.alt
