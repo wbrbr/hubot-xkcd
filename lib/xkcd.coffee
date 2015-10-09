@@ -9,24 +9,26 @@
 # Author:
 #  nounoursheureux
 
+url = 'http://xkcd.com'
+
 module.exports = (robot) ->
   robot.respond /xkcd( current)?$/i, (res) ->
-    robot.http('http://xkcd.com/info.0.json').get() (err, response, body) ->
+    robot.http("#{url}/info.0.json").get() (err, response, body) ->
       throw err if err
       data = JSON.parse(body)
       res.send data.title, data.img, data.alt
 
   robot.respond /xkcd random$/i, (res) ->
-    robot.http('http://xkcd.com/info.0.json').get() (err, response, body) ->
+    robot.http("#{url}/info.0.json").get() (err, response, body) ->
       throw err if err
       maxNum = JSON.parse(body).num
       randNum = res.random [1..maxNum]
-      robot.http("http://xkcd.com/#{randNum}/info.0.json").get() (err, response, body) ->
+      robot.http("#{url}/#{randNum}/info.0.json").get() (err, response, body) ->
         data = JSON.parse(body)
         res.send data.title, data.img, data.alt
 
   robot.respond /xkcd (\d+)/i, (res) ->
-    robot.http("http://xkcd.com/#{res.match[1]}/info.0.json").get() (err, response, body) ->
+    robot.http("#{url}/#{res.match[1]}/info.0.json").get() (err, response, body) ->
       if response.statusCode is 404
         res.send 'This comic doesn\'t exist'
       else
