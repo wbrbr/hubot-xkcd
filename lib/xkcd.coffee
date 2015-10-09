@@ -1,12 +1,12 @@
-# Description: 
+# Description:
 #  Get links to XKCD comics with Hubot"
 #
-# Commands: 
+# Commands:
 #  hubot xkcd (current) - send a link to the last XKCD comic
 #  hubot xkcd random - send a link to a random XKCD comic
 #  hubot xkcd <number> - send a link to the specified XKCD comic
 #
-# Author: 
+# Author:
 #  nounoursheureux
 
 module.exports = (robot) ->
