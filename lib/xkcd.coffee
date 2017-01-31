@@ -9,7 +9,7 @@
 # Author:
 #  nounoursheureux
 
-url = 'http://xkcd.com'
+url = 'https://xkcd.com'
 
 sendComic = (res, body) ->
   data = JSON.parse body
