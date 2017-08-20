@@ -1,6 +1,6 @@
 {
   "name": "hubot-xkcd",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Get links to XKCD comics with Hubot",
   "main": "lib/xkcd.coffee",
   "scripts": {
