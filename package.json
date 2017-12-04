@@ -2,7 +2,7 @@
   "name": "hubot-xkcd",
   "version": "0.0.4",
   "description": "Get links to XKCD comics with Hubot",
-  "main": "lib/xkcd.coffee",
+  "main": "lib/xkcd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
