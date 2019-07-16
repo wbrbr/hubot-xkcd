@@ -4,7 +4,7 @@
   "description": "Get links to XKCD comics with Hubot",
   "main": "lib/xkcd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": "nounoursheureux/hubot-xkcd",
   "keywords": [
