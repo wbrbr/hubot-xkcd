@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nounoursheureux/hubot-xkcd/issues"
   },
-  "homepage": "https://github.com/nounoursheureux/hubot-xkcd#readme"
+  "homepage": "https://github.com/nounoursheureux/hubot-xkcd#readme",
+  "devDependencies": {
+    "hubot-test-helper": "^1.9.0",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3"
+  }
 }
