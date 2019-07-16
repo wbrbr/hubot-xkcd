@@ -4,7 +4,7 @@
   "description": "Get links to XKCD comics with Hubot",
   "main": "lib/xkcd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": "nounoursheureux/hubot-xkcd",
   "keywords": [
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nounoursheureux/hubot-xkcd/issues"
   },
-  "homepage": "https://github.com/nounoursheureux/hubot-xkcd#readme"
+  "homepage": "https://github.com/nounoursheureux/hubot-xkcd#readme",
+  "devDependencies": {
+    "hubot-test-helper": "^1.9.0",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3"
+  }
 }
